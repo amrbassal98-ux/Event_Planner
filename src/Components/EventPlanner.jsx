@@ -1,8 +1,9 @@
 import React from 'react';
 import './EventPlanner.css'; // Import CSS file for styling
-
+import Footer from './Footer';
 const EventPlanner = () => {
     return (
+        <>
         <div className="event-planner-container">
             <header>
                 <h1>Welcome to Event Planner</h1>
@@ -69,9 +70,17 @@ const EventPlanner = () => {
                 </div>
             </section>
             <section className='contact'>
-
+                <h2>Contact Us</h2>
+                <form>
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" className="submit-button">Send</button>
+                </form>
             </section>
+            <Footer/>
         </div>
+        </>
     );
 };
 
